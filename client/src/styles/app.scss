@@ -1,0 +1,84 @@
+@import './variables.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  background-color: $background-color;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 1px 2px 5px grey;
+  flex-direction: column;
+  
+  &_header {
+    border-radius: 10px 10px 0 0;
+    color: $primary-color;
+  } 
+
+  &_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    border-radius: 10px;
+    border: 1px solid $primary-color;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 2px 1px 5px;
+
+    &_control {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 20px;
+
+      label {
+        font-size: 1.2rem;
+      }
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $primary-color;
+      }
+    }
+
+    p {
+      width: 100%;
+      color: red;
+    }
+
+    button {
+      padding: 5px 20px;
+      color: white;
+      background-color: $primary-color;
+      outline: none;
+      border: none;
+      text-transform: uppercase;
+      border-radius: 10px;
+      transition: 0.2s;
+
+      &:hover {
+        filter: brightness(110%);
+      }
+      &:active {
+        transform: translateY(3px);
+      }
+    }
+  }
+}
